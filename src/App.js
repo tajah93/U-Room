@@ -1,5 +1,6 @@
 import './App.css';
 import Header from './components/Header/Header'; 
+import Cards from './components/Cards/Cards';
 import { BrowserRouter as Router, Switch, Route} from "react-router-dom"; 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
           </Route>
           {/* homepage route always at the bottom */}
           <Route path= "/">
+            <Cards />
           </Route>
         </Switch>
 
