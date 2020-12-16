@@ -9,5 +9,12 @@
     border-radius: 50%
     !important;
     border-radius: 100%;
-    padding: 11px 18px !important
+    padding: 11px 18px !important;
 }
+
+#gradIcon {
+    background-color: crimson;
+}
+
+
+
