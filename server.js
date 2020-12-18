@@ -7,13 +7,13 @@ const app = express();
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-
+app.use("/", require("./routes/api/roommies"));
 
 if (process.env.NODE_ENV === "production") {
     app.use(express.static("build"));
 }
 
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/U-Room", { useNewUrlParser: true });
+mongoose.connect(process.env.MONGODB_URI || "mongodb+srv://tajah93:Gj243315@cluster0.owzsk.mongodb.net/roomdb", { useNewUrlParser: true });
 
 
 app.listen(PORT, () => {
