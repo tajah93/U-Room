@@ -1,6 +1,7 @@
-import React, { useState} from 'react';
+import React, { useEffect, useState} from 'react';
 import TinderCard from 'react-tinder-card'; 
 import './Cards.css';
+import roommies from '.../models/roommies';
 
 function Cards () {
     const [roommate, setRoommate] = useState([
@@ -13,6 +14,14 @@ function Cards () {
             url: 'https://i.pinimg.com/originals/8a/d0/bf/8ad0bf02fe5fab1c1e2336dc7bc9e7f3.jpg'
         }
     ]);
+
+    useEffect( () => {
+        roommies.collection('roommies').onSnapshot(snapshot => (
+            setRoommate(snapshot.docs.map(doc => doc.data())
+        )))
+    }, []);
+
+    
 
     return (
         <div>
