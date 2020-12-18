@@ -11,7 +11,7 @@ module.exports = {
                 res.status(422).json(err));
     },
     findById: function(req, res) {
-      db.Book
+      db.roommies
         .findById(req.params.id)
         .then(dbModel => 
           res.json(dbModel))
