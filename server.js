@@ -13,7 +13,7 @@ if (process.env.NODE_ENV === "production") {
     app.use(express.static("build"));
 }
 
-mongoose.connect(process.env.MONGODB_URI || "mongodb+srv://tajah93:Gj243315@cluster0.owzsk.mongodb.net/roomdb", { useNewUrlParser: true });
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/u-room", { useNewUrlParser: true });
 
 
 app.listen(PORT, () => {
