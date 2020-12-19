@@ -17,6 +17,12 @@
     display: flex;
 }
 
+.title {
+    font-size: 20px;
+    padding-left: 30px;
+    padding-top: 10px;
+}
+
 .roommieCard > h2 {
     color: whitesmoke;
     bottom: 5px;

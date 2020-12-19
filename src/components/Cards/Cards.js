@@ -2,7 +2,7 @@ import { Mongoose, MongooseDocument } from 'mongoose';
 import React, { useEffect, useState}  from 'react';
 import TinderCard from 'react-tinder-card'; 
 import './Cards.css';
-import roomdb from 'mongoose';
+
 // ,{ useEffect, useState} 
 // import roommies from '.../models/roommies';
 
@@ -32,13 +32,10 @@ function Cards () {
     //     // }
     // ]);
 
-    
-
-    
 
     return (
         <div>
-            <h1>Cards</h1>
+            <h1 className= 'title'>U-Room</h1>
 
             <div className= 'cardContainer'>
 
