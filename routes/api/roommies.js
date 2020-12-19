@@ -9,7 +9,7 @@ router.route("/")
 
 router.route("/:id")
   .get(controllers.findById)
-  .put(controllers.update)
-  .delete(controllers.remove);
+  // .put(controllers.update)
+  // .delete(controllers.remove);
 
 module.exports = router;
