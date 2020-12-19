@@ -1,0 +1,27 @@
+.header {
+    display: flex;
+    justify-content: space-between; 
+    border-bottom: .5px solid rgba(248, 233, 233, 0.836);
+    padding: 20px;
+    background-color: rgba(248, 237, 237, 0.603);
+}
+
+.btn-default {
+    background-color: rgba(248, 237, 237, 0.603) !important;
+
+}
+
+
+.icons {
+    border-radius: 50%
+    !important;
+    border-radius: 100%;
+    padding: 11px 18px !important;
+}
+
+#gradIcon {
+    background-color: crimson !important;
+}
+
+
+

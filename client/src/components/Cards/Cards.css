@@ -1,0 +1,35 @@
+.roommieCard {
+    width: 600px;
+    padding: 20px;
+    max-width: 85vw;
+    height: 50vh;
+    position: relative;
+    border-radius: 20px;
+    background-size: cover;
+    background-position: center;
+    color: whitesmoke;
+    bottom: 10px;
+}
+
+.cardContainer {
+    margin-top: 5vh;
+    justify-content: center;
+    display: flex;
+}
+
+.title {
+    font-size: 20px;
+    padding-left: 30px;
+    padding-top: 10px;
+}
+
+.roommieCard > h2 {
+    color: whitesmoke;
+    bottom: 5px;
+    position: absolute;
+    font-size: 20px;
+}
+
+.rummage {
+    position: absolute;
+}
