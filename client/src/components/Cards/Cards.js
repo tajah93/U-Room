@@ -12,21 +12,21 @@ function Cards () {
         url: ''
     })
 
+    useEffect(() => {
+        API.getRoomies().then((data) => setRoommate(data))
+      }, [])
+
     function handleChange(event) {
         const {key, style} = event.target;
 
-        setRoommate(prevRoommate => {
+        setRoommate(roommie => {
             return{
-                ...prevRoommate,
+                ...roommie,
                 [key]: style
             }
         })
     }
 
-    useEffect(() => {
-        API.getRoomies().then((data) => setRoommate(data))
-      }, [])
-  
 
 
     return (
