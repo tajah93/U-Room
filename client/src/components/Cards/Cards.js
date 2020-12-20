@@ -10,7 +10,9 @@ function Cards () {
     const [roommie, setRoommate] = useState([])
 
     useEffect(() => {
-        API.getRoomies().then((data) => setRoommate(data))
+        API.getRoommies()
+        .then(data => 
+            setRoommate(data))
       }, [])
 
     function handleChange(event) {

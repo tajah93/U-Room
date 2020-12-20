@@ -1,0 +1,22 @@
+.MatchBtns {
+    bottom: 10vh;
+    border-top: .5px grey !important;
+    background-color: rgba(0, 0, 0, 0.822);
+    display: flex;
+    justify-content: space-between;
+    padding: 11px 18px;
+    color: rgba(248, 237, 237, 0.603);
+    position: absolute;
+    width: 100%;
+    bottom:0;
+    
+    
+}
+
+.icons {
+    border-radius: 50%
+    !important;
+    border-radius: 100%;
+    padding: 11px 18px !important;
+}
+
