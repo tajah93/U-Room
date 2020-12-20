@@ -7,10 +7,7 @@ import './Cards.css';
 
 
 function Cards () {
-    const [roommie, setRoommate] = useState({
-        name: '',
-        url: ''
-    })
+    const [roommie, setRoommate] = useState([])
 
     useEffect(() => {
         API.getRoomies().then((data) => setRoommate(data))
