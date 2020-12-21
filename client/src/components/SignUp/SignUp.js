@@ -17,12 +17,21 @@ const SignUp = () => {
     const [password, setPassword] = useState("");
     const [name, setName] = useState("");
     const [error, setError] = useState(null);
-    const createUserWithCredentialsHandler = (event, email, password) => {
+
+    const createUserWithCredentialsHandler = async (event, email, password) => {
         event.preventDefault();
+        try{
+          const {user} = await auth.createUserWithCredentials(email, password);
+          generateUserDocument(user, {name});
+        }
+        catch(error){
+          setError('Error Signing up with email and password');
+        }
+    
         setEmail("");
         setPassword("");
         setName("");
-    };
+      };
     const onChangeHandler = event => {
         const { name, value } = event.currentTarget;
         if (name === "userEmail") {

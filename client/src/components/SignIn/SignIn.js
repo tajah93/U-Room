@@ -18,10 +18,13 @@ const SignIn = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState(null);
-    const signInWithCredentialsHandler =
-        (event, email, password) => {
-            event.preventDefault();
-        };
+    const signInWithCredentialsHandler = (event, email, password) => {
+        event.preventDefault();
+        auth.signInWithCredentials(email, password).catch(error => {
+          setError("Error signing in with password and email!");
+          console.error("Error signing in with password and email", error);
+        });
+      };
 
     const onChangeHandler = (event) => {
         const { name, value } = event.currentTarget;
