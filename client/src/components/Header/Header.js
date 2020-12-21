@@ -16,7 +16,9 @@ function Header () {
             <Link to= "/">
             <MDBBtn className= "icons" color= "white" idname= "gradIcon"><MDBIcon icon="graduation-cap" className= "logo" /></MDBBtn>
             </Link>
+            <Link to="/profile">
             <MDBBtn  color= "white"  className= "icons"><MDBIcon far icon="user" /></MDBBtn>
+            </Link>
             <Link to= "/message">
             <MDBBtn  color= "white" className= "icons"><MDBIcon far icon="comments" /></MDBBtn>
             </Link>

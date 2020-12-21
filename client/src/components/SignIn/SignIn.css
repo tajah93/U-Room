@@ -1,0 +1,24 @@
+.col-md-6 {
+    margin:auto;
+}
+
+
+.card-header {
+    padding: .75rem 1.25rem;
+    margin-bottom: 0;
+    background-color: rgba(24, 24, 24, 0.815);
+    border-bottom: 1px solid rgba(0,0,0,.125);
+}
+
+.log {
+    color: rgba(250, 236, 236, 0.932);
+}
+
+.my-3 {
+    color: rgba(250, 236, 236, 0.932);
+   
+}
+
+.btn-default {
+    background-color: black !important;
+}
