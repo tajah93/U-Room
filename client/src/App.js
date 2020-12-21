@@ -16,33 +16,29 @@ function App() {
     <div className="App">
 
       <Router>
-        <Header returnHist="/" />
+        <Header />
         <header className="App-header">
           <Switch>
+          <Route exact path="/">
+              <Cards />
+              <MatchBtns />
+            </Route>
             <Route path="/message">
               <Messages />
             </Route>
             <UserProvider>
-              
-            user ?
+            <Route path="/myprofile">
             <Profile />
-            :
+            </Route>
             <Route path="/profile">
               <SignIn />
-
             </Route>
             <Route path="/SignUp">
               <SignUp />
-              </Route> 
+            </Route> 
               </UserProvider>
-
-            
-            {/* homepage route always at the bottom */}
-            <Route path="/">
               
-              <Cards />
-              <MatchBtns />
-            </Route>
+            {/* homepage route always at the bottom */}
           </Switch>
         </header>
       </Router>

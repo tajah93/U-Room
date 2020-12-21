@@ -12,15 +12,16 @@ import {
     MDBBtn
 } from "mdbreact";
 import "./SignIn.css";
+import { auth } from "../config/firebase"; 
 
 
 const SignIn = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState(null);
-    const signInWithCredentialsHandler = (event, email, password) => {
+    const signInWithEmailAndPasswordHandler = (event, email, password) => {
         event.preventDefault();
-        auth.signInWithCredentials(email, password).catch(error => {
+        auth.signInWithEmailAndPassword(email, password).catch(error => {
           setError("Error signing in with password and email!");
           console.error("Error signing in with password and email", error);
         });
@@ -80,14 +81,15 @@ const SignIn = () => {
                                 />
 
                                 <div className="text-center mt-4">
-                                    <MDBBtn color="dark" className="mb-3" className="bg-dark" type="submit" onClick={(event) => { signInWithCredentialsHandler(event, email, password) }}>
+                                    <Link to="/myprofile">
+                                    <MDBBtn color="dark" className="mb-3" className="bg-dark" type="submit" onClick={(event) => { signInWithEmailAndPasswordHandler(event, email, password) }}>
                                         Login
-                </MDBBtn>
+                </MDBBtn></Link>
                                 </div>
 
                                 <MDBModalFooter>
                                     <div className="font-weight-light">
-                                        <p>Not a member? Sign Up</p>
+                                        <p>Not a member?</p>
                                         <Link to="/SignUp" className="text-blue-500 hover:text-blue-600">
                                             Sign up here
           </Link>

@@ -11,17 +11,20 @@ import {
     MDBCardHeader,
     MDBBtn
 } from "mdbreact";
+import { auth, generateUserDocument } from "../config/firebase"; 
 
 const SignUp = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [name, setName] = useState("");
+    const [major, setMajor] = useState("");
+    const [description, setDescription] = useState("");
     const [error, setError] = useState(null);
 
-    const createUserWithCredentialsHandler = async (event, email, password) => {
+    const createUserWithEmailAndPasswordHandler = async (event, email, password, major, description) => {
         event.preventDefault();
         try{
-          const {user} = await auth.createUserWithCredentials(email, password);
+          const {user} = await auth.createUserWithEmailAndPassword(email, password, major, description);
           generateUserDocument(user, {name});
         }
         catch(error){
@@ -31,6 +34,8 @@ const SignUp = () => {
         setEmail("");
         setPassword("");
         setName("");
+        setMajor("");
+        setDescription("");
       };
     const onChangeHandler = event => {
         const { name, value } = event.currentTarget;
@@ -40,6 +45,10 @@ const SignUp = () => {
             setPassword(value);
         } else if (name === "name") {
             setName(value);
+        } else if (name === "userMajor") {
+            setMajor(value);
+        } else if (name === "userDescription"){
+            setDescription(value)
         }
     };
     return (
@@ -98,10 +107,39 @@ const SignUp = () => {
                                     className="form-control"
                                 />
 
+<label
+                                    htmlFor="defaultFormPasswordEx"
+                                    className="grey-text font-weight-light"
+                                >
+                                    Major
+              </label>
+                                <input
+                                    type="major"
+                                    id="defaultFormEmailEx"
+                                    name="userMajor"
+                                    value={major}
+                                    onChange={(event) => onChangeHandler(event)}
+                                    className="form-control"
+                                />
+                                 <label
+                                    htmlFor="defaultFormPasswordEx"
+                                    className="grey-text font-weight-light"
+                                >
+                                    Description
+              </label>
+                                <input
+                                    type="description"
+                                    id="defaultFormEmailEx"
+                                    name="userDescription"
+                                    value={description}
+                                    onChange={(event) => onChangeHandler(event)}
+                                    className="form-control"
+                                />
+
                                 <div className="text-center mt-4">
-                                    <MDBBtn color="dark" className="mb-3" className="bg-dark" type="submit" onClick={(event) => { createUserWithCredentialsHandler(event, email, password) }}>
+                                  <Link to="/myprofile"><MDBBtn color="dark" className="mb-3" className="bg-dark" type="submit" onClick={(event) => { createUserWithEmailAndPasswordHandler(event, email, password) }}>
                                         Login
-                </MDBBtn>
+                </MDBBtn></Link> 
                                 </div>
 
                                 <MDBModalFooter>
