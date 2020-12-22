@@ -11,6 +11,7 @@
     "mongo": "^0.1.0",
     "mongo-seeding": "^3.5.0",
     "mongoose": "^5.11.8",
+    "react-swipe-card": "^0.1.4",
     "seed": "^0.4.4",
     "seed-mongodb": "^0.6.0"
   },
@@ -21,7 +22,6 @@
     "client": "cd client && npm run start",
     "seed": "node scripts/seeder.js",
     "install": "cd client && npm install",
-    
     "heroku-postbuild": "npm run build"
   },
   "main": "server.js",
@@ -38,9 +38,8 @@
   "bugs": {
     "url": "https://github.com/tajah93/U-Room/issues"
   },
-  "engines": { 
-    "node": "4.7.0" 
+  "engines": {
+    "node": "4.7.0"
   },
   "homepage": "https://github.com/tajah93/U-Room"
-  
 }

@@ -2,7 +2,7 @@ const router = require("express").Router();
 const controllers = require("../../controllers/controllers");
 
 
-router.route("/")
+router.route("/roommies")
   .get(controllers.findAll)
   .post(controllers.create);
 

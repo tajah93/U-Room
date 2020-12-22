@@ -1,7 +1,8 @@
 .roommieCard {
     width: 600px;
     padding: 20px;
-    max-width: 85vw;
+    padding-top: 30px;
+    max-width: 28vw;
     height: 50vh;
     position: relative;
     border-radius: 20px;
@@ -9,6 +10,7 @@
     background-position: center;
     color: whitesmoke;
     bottom: 10px;
+    
 }
 
 .cardContainer {
@@ -25,11 +27,55 @@
 
 .roommieCard > h2 {
     color: whitesmoke;
-    bottom: 5px;
+    bottom: 70px;
     position: absolute;
     font-size: 20px;
 }
 
+.roommieCard > h3 {
+    color: whitesmoke;
+    bottom: 50px;
+    position: absolute;
+    font-size: 15px;
+}
+
+.roommieCard > p {
+    color: white;
+    font-weight: bold;
+    bottom: 3px;
+    position: absolute;
+    font-size: 13px;
+}
+
 .rummage {
     position: absolute;
+    justify-content: center;
+    text-align: center !important;
+}
+.profCard{
+    margin: auto;
+    padding-top: 20px;
+    text-align: center;
+}
+
+@media only screen and (min-width: 700px) {
+.img {
+    width: 82vw;
+    height: 26rem !important;
+   
+}
+}
+@media only screen and (min-width: 1300px) {
+    .img {
+        width: 43vw !important;
+        height: 27rem !important;
+       
+    }
+    }
+
+@media only screen and (max-width: 700px) {
+    .roommieCard {
+        max-width: 80vw
+    }
+
 }

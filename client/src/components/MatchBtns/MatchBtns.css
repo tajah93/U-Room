@@ -6,9 +6,10 @@
     justify-content: space-between;
     padding: 11px 18px;
     color: rgba(248, 237, 237, 0.603);
-    position: absolute;
+    position: fixed;
     width: 100%;
     bottom:0;
+  
     
     
 }
