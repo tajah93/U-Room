@@ -1,6 +1,5 @@
 .thread {
     display: flex;
-    justify-content: space-between;
     border-bottom: 2px rgb(231, 231, 231);
     padding: 15px;
     height: 60px;
@@ -13,7 +12,7 @@ img.rounded-circle {
     height: 10vh !important;
     width: 24vw;
     display: flex;
-    
+    justify-content: center;
 }
 .convo_needs {
     flex:1;
@@ -24,6 +23,7 @@ h3.name {
     font-size: 10px;
     display: flex;
     font-weight: bold;
+    text-align: center;
     
 }
 

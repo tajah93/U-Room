@@ -4,15 +4,21 @@ import API from '../../utils/API';
 import "./Thread.css";
 import { useParams } from "react-router";
 
-function Thread({name, message, url}) {
+function Thread({message}) {
     const [roommie, setRoommate] = useState({})
    const {id} = useParams()
    
+//    useEffect(() => {
+//     if (id) {
+//       API.getRoommie(id).then(data => setRoommate(data.data)).catch(err => console.log(err));
+//     }
+// }, [])
     useEffect(() => {
+        
         API.getRoommie(id)
         .then(data => setRoommate(data.data))
         .catch(err => console.log(err));
-           
+        
 
       }, [])
 
@@ -31,13 +37,16 @@ function Thread({name, message, url}) {
         {/* {roommie.map((roommie => ( */}
 
         <div className="thread">
+            <div className="row">
             <MDBCol mb="1" md="1" className="mb-3 text-center">
             <img src={roommie.url} className="rounded-circle" alt={roommie.name} data-holder-rendered="true"/>
-          </MDBCol>
+          </MDBCol></div>
+          <div className="row">
           <div className= "convo_needs">
               <h3 className= "name">{roommie.name}</h3>
               <p className= "message">{message}</p>
           </div>
+         </div>
 
         </div>
 
