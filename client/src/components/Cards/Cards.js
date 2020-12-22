@@ -4,12 +4,12 @@ import TinderCard from 'react-tinder-card';
 import API from '../../utils/API';
 import './Cards.css';
 import { MDBCard, MDBCardBody, MDBCardImage, MDBCardTitle, MDBCardText, MDBRow, MDBCol, MDBIcon } from 'mdbreact';
-
+import { Link, useHistory } from 'react-router-dom';
 
 
 function Cards() {
     const [roommie, setRoommate] = useState([])
-
+   
     useEffect(() => {
         API.getRoommies()
         .then(data => 
@@ -31,8 +31,12 @@ function Cards() {
             }
         })
     }
+    const onSwipe= function onSwipe(direction) {
+        console.log("You swiped" + direction)
+ }
 
-
+   
+        
 console.log(roommie)
     return (
         <div>
@@ -73,9 +77,19 @@ console.log(roommie)
 )))}
          
              </div>
+             {(() => {
+
+if (onSwipe = "right") {
+    <Link to="/match"></Link>
+}
+})()}
 
         </div>
+       
+        
+   
     )
+   
 }
 
 export default Cards; 
