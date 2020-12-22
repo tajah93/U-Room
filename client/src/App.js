@@ -7,7 +7,7 @@ import SignIn from './components/SignIn/SignIn';
 import SignUp from './components/SignUp/SignUp';
 import Profile from './components/Profile/Profile';
 import UserProvider from "./providers/UserProvider";
-
+import Thread from './components/Thread/Thread';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
@@ -25,6 +25,9 @@ function App() {
             </Route>
             <Route path="/message">
               <Messages />
+            </Route>
+            <Route path="/roommies/:id">
+              <Thread />
             </Route>
             <UserProvider>
             <Route path="/myprofile">

@@ -1,6 +1,9 @@
 import React from 'react';
 import { MDBIcon, MDBBtn} from 'mdbreact';
-import "./MatchBtns.css"
+import "./MatchBtns.css";
+import { Link,  Redirect  } from 'react-router-dom';
+
+
 
 function MatchBtns() {
     return(

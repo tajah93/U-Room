@@ -3,8 +3,9 @@ import React, { useEffect, useState}  from 'react';
 import TinderCard from 'react-tinder-card'; 
 import API from '../../utils/API';
 import './Cards.css';
-import { MDBCard, MDBCardBody, MDBCardImage, MDBCardTitle, MDBCardText, MDBRow, MDBCol, MDBIcon } from 'mdbreact';
-import { Link, useHistory } from 'react-router-dom';
+import { MDBCard, MDBBtn, MDBCardBody, MDBCardImage, MDBCardTitle, MDBCardText, MDBRow, MDBCol, MDBIcon } from 'mdbreact';
+import MatchBtns from '../MatchBtns/MatchBtns';
+import { Link } from 'react-router-dom';
 
 
 function Cards() {
@@ -31,9 +32,11 @@ function Cards() {
             }
         })
     }
-    const onSwipe= function onSwipe(direction) {
-        console.log("You swiped" + direction)
- }
+    // state = { redirect: null };
+    // render() {
+    //   if (this.state.redirect) {
+    //     return <Redirect to={this.state.redirect} />
+    //   }
 
    
         
@@ -51,12 +54,14 @@ console.log(roommie)
                 <MDBRow>
                 <MDBCol className="profCard" style={{ maxWidth: "40rem" }}>
                 <TinderCard className= 'rummage'>
-                    <MDBCard reverse  onChange= {handleChange} preventSwipe= {['up', 'down']}  key= {roommie.name}>
+                    <MDBCard reverse  onChange= {handleChange} preventSwipe= {['up', 'down']} onSwipe={['right']} key= {roommie._id}>
                         <MDBCardImage cascade className="img" style={{ height: '20rem' }} className= 'roommieCard' onChange= {handleChange}  src={roommie.url}/>
                         <MDBCardBody cascade className="text-center">
                             <MDBCardTitle>{roommie.name}</MDBCardTitle>
                             <h5 className="indigo-text"><strong>{roommie.major}</strong></h5>
                             <MDBCardText>{roommie.description}</MDBCardText>
+                            <Link to={"/roommies/" + roommie._id}><MDBBtn  color= "rgba(0, 0, 0, 0.822)"  className= "icons"><MDBIcon far icon="heart" /></MDBBtn></Link>
+
                         </MDBCardBody>
                     </MDBCard>
                     </TinderCard>
@@ -77,13 +82,8 @@ console.log(roommie)
 )))}
          
              </div>
-             {(() => {
-
-if (onSwipe = "right") {
-    <Link to="/match"></Link>
-}
-})()}
-
+            
+< MatchBtns />
         </div>
        
         
