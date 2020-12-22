@@ -1,7 +1,7 @@
 import React from 'react';
 import { MDBIcon, MDBBtn} from 'mdbreact';
 import "./MatchBtns.css";
-import { Link,  Redirect  } from 'react-router-dom';
+
 
 
 
@@ -10,8 +10,8 @@ function MatchBtns() {
 
     <div className= "MatchBtns">
 
-        <MDBBtn  color= "rgba(0, 0, 0, 0.822)"  className= "icons"><MDBIcon icon="times" /></MDBBtn>
-        <MDBBtn  color= "rgba(0, 0, 0, 0.822)"  className= "icons"><MDBIcon icon="redo" /></MDBBtn> 
+        {/* <MDBBtn  color= "rgba(0, 0, 0, 0.822)"  className= "icons"><MDBIcon icon="times" /></MDBBtn>
+        <MDBBtn  color= "rgba(0, 0, 0, 0.822)"  className= "icons"><MDBIcon icon="redo" /></MDBBtn>  */}
         <MDBBtn  color= "rgba(0, 0, 0, 0.822)"  className= "icons"><MDBIcon far icon="heart" /></MDBBtn>
 
     </div>

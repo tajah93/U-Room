@@ -14,6 +14,7 @@ app.use("/api", require("./routes/api/roommies"));
 app.use("/", require("./routes"));
 
 
+
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/roomdb", { useNewUrlParser: true });
 
 

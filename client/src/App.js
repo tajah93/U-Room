@@ -2,7 +2,7 @@ import './App.css';
 import Header from './components/Header/Header';
 import Cards from './components/Cards/Cards';
 import Messages from './components/Messages/Messages';
-import MatchBtns from './components/MatchBtns/MatchBtns';
+// import MatchBtns from './components/MatchBtns/MatchBtns';
 import SignIn from './components/SignIn/SignIn';
 import SignUp from './components/SignUp/SignUp';
 import Profile from './components/Profile/Profile';
@@ -21,7 +21,7 @@ function App() {
           <Switch>
           <Route exact path="/">
               <Cards />
-              <MatchBtns />
+             
             </Route>
             <Route path="/message">
               <Messages />

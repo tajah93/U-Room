@@ -7,7 +7,7 @@ router.route("/roommies")
   .post(controllers.create);
 
 
-router.route("/:id")
+router.route("/roommies/:id")
   .get(controllers.findById)
   // .put(controllers.update)
   // .delete(controllers.remove);

@@ -1,7 +1,8 @@
-import React from "react";
-import { MDBCard, MDBCardBody, MDBCardImage, MDBCardTitle, MDBCardText, MDBRow, MDBCol, MDBIcon } from 'mdbreact';
+import React,  {useContext, UserContext} from "react";
+import { MDBBtn, MDBCard, MDBCardBody, MDBCardImage, MDBCardTitle, MDBCardText, MDBRow, MDBCol } from 'mdbreact';
 import "./Profile.css";
 import { auth } from "../config/firebase";
+import { Link } from 'react-router-dom';
 
 const Profile = () => {
     const user = useContext(UserContext);

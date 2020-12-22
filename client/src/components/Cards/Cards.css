@@ -1,6 +1,6 @@
 .roommieCard {
     width: 600px;
-    padding: 20px;
+    padding: 10px;
     padding-top: 30px;
     max-width: 28vw;
     height: 50vh;
@@ -10,13 +10,19 @@
     background-position: center;
     color: whitesmoke;
     bottom: 10px;
+    justify-content: center;
+    
     
 }
 
 .cardContainer {
-    margin-top: 5vh;
-    justify-content: center;
-    display: flex;
+    
+    justify-content: center !important;
+    align-items: center;
+    display: flex !important;
+    padding-top: 15px;
+    position: relative;
+    
 }
 
 .title {
@@ -48,9 +54,11 @@
 }
 
 .rummage {
+   
     position: absolute;
-    justify-content: center;
-    text-align: center !important;
+    top: 50%;
+    margin: 0 auto;
+
 }
 .profCard{
     margin: auto;

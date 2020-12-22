@@ -7,14 +7,12 @@ import { useParams } from "react-router";
 function Thread({name, message, url}) {
     const [roommie, setRoommate] = useState({})
    const {id} = useParams()
+   
     useEffect(() => {
         API.getRoommie(id)
-        .then(data => 
-            {
-                console.log(data)
-                setRoommate(data.data)
-            }
-        )
+        .then(data => setRoommate(data.data))
+        .catch(err => console.log(err));
+           
 
       }, [])
 

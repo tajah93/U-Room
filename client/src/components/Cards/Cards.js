@@ -1,4 +1,3 @@
-import { Mongoose, MongooseDocument } from 'mongoose';
 import React, { useEffect, useState}  from 'react';
 import TinderCard from 'react-tinder-card'; 
 import API from '../../utils/API';
@@ -60,7 +59,7 @@ console.log(roommie)
                             <MDBCardTitle>{roommie.name}</MDBCardTitle>
                             <h5 className="indigo-text"><strong>{roommie.major}</strong></h5>
                             <MDBCardText>{roommie.description}</MDBCardText>
-                            <Link to={"/roommies/" + roommie._id}><MDBBtn  color= "rgba(0, 0, 0, 0.822)"  className= "icons"><MDBIcon far icon="heart" /></MDBBtn></Link>
+                            {/* <Link to={"/roommies/" + roommie._id}><MDBBtn><MDBIcon far icon="heart" /></MDBBtn></Link> */}
 
                         </MDBCardBody>
                     </MDBCard>
@@ -83,7 +82,7 @@ console.log(roommie)
          
              </div>
             
-< MatchBtns />
+             <Link to={"/roommies/" + roommie._id}>< MatchBtns /></Link>
         </div>
        
         

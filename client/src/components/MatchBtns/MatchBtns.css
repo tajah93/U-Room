@@ -3,14 +3,12 @@
     border-top: .5px grey !important;
     background-color: rgba(0, 0, 0, 0.822);
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     padding: 11px 18px;
     color: rgba(248, 237, 237, 0.603);
     position: fixed;
     width: 100%;
     bottom:0;
-  
-    
     
 }
 
