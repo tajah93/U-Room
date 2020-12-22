@@ -21,8 +21,8 @@
     "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
     "client": "cd client && npm run start",
     "seed": "node scripts/seeder.js",
-    "install": "cd client && npm install",
-    "heroku-postbuild": "npm run build"
+    "install": "cd client && npm install"
+    
   },
   "main": "server.js",
   "devDependencies": {
